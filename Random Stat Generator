@@ -1,0 +1,6 @@
+import random
+
+stats = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
+for items in stats:
+  number = random.randint(3,18)
+  print(items, number)
