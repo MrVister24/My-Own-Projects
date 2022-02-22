@@ -1,0 +1,7 @@
+import random
+
+stats = ["Roll 1:", "Roll 2:", "Roll 3:", "Roll 4:", "Roll 5:", "Roll 6:"]
+print("Rolls for stats...")
+for items in stats:
+  number = random.randint(3,18)
+  print(items, number)
