@@ -1,0 +1,82 @@
+import random
+
+level = random.randint(1,20)
+print(f"Level {level}")
+
+race = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Hafling", "Half-orc", "Human", "Tiefling"]
+outcome_race = random.choice(race)
+print(outcome_race)
+
+player = ["Artificer", "Bard", "Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard", "Warlock"]
+outcome = random.choice(player)
+print(outcome)
+
+Artificer_Sub = ["Alchemist", "Armorer", "Artillerist", "Battlesmith"]
+Bard_Sub = ["Creation", "Eloquence", "Glamour", "Lore", "Spirits", "Swords", "Valor", "Whispers"]
+Barbarian_Sub = ["Ancestral Guardian", "Battlerager", "Beast", "Berserker", "Storm Herald", "Totem Warrior", "Wild Magic", "Zealot"]
+Cleric_Sub = ["Arcana", "Death", "Forge", "Grave", "Knowledge", "Life", "Light", "Nature", "Order", "Peace", "Tempest", "Trickery", "Twilight", "War"]
+Druid_Sub = ["Dreams", "Land", "Moon", "Shepherd", "Spores", "Stars", "Wildfire"]
+Fighter_Sub = ["Arcane Archer", "Battle Master", "Cavalier", "Champion", "Echo Knight", "Eldritch Knight", "Psi Warrior", "Purple Dragon Knight (Banneret)", "Rune Knight", "Samurai"]
+Monk_Sub = ["Ancestral Dragon", "Astral Self", "Drunken Master", "Four Elements", "Kensei", "Long Death", "Mercy", "Open Hand", "Shadow", "Sun Soul"]
+Paladin_Sub = ["Ancients", "Conquest", "Crown", "Devotion", "Glory", "Oathbreaker", "Redemption", "Vengeance", "Watchers"]
+Ranger_Sub = ["Beast Master", "Drakewarden", "Fey Wanderer", "Gloom Stalker", "Horizon Walker", "Hunter", "Monster Slayer", "Swarmkeeper"]
+Rogue_Sub = ["Arcane Trickster", "Assassin", "Inquisitive", "Mastermind", "Phantom", "Scout", "Soulknife", "Swashbuckler", "Thief"]
+Sorcerer_Sub = ["Abberant Mind", "Clockwork Soul", "Divine Soul", "Draconic", "Shadow", "Storm", "Wild"]
+Warlock_Sub = ["Archfey", "Celestial", "Fathomless", "Fiend", "Genie", "Great Old One", "Hexblade", "Undead", "Undying"]
+Wizard_Sub = ["Abjuration", "Bladesinging", "Chronurgy", "Conjuration", "Divination", "Enchantment", "Evocation", "Graviturgy", "Illusion", "Necromancy", "Scribes", "Transmutation", "War"]
+
+if outcome == "Artificer":
+  if level > 2:
+    sub = random.choice(Artificer_Sub)
+    print(sub)
+elif outcome == "Bard":
+  if level > 2:
+    sub = random.choice(Bard_Sub)
+    print(sub)
+elif outcome == "Barbarian":
+  if level > 2:
+    sub = random.choice(Barbarian_Sub)
+    print(sub)
+elif outcome == "Cleric":
+  sub = random.choice(Cleric_Sub)
+  print(sub)
+elif outcome == "Druid":
+  if level > 1:
+    sub = random.choice(Druid_Sub)
+    print(sub)
+elif outcome == "Fighter":
+  if level > 2:
+    sub = random.choice(Fighter_Sub)
+    print(sub)
+elif outcome == "Monk":
+  if level > 2:
+    sub = random.choice(Monk_Sub)
+    print(sub)
+elif outcome == "Paladin":
+  if level > 2:
+    sub = random.choice(Paladin_Sub)
+    print(sub)
+elif outcome == "Ranger":
+  if level > 2:
+    sub = random.choice(Ranger_Sub)
+    print(sub)
+elif outcome == "Rogue":
+  if level > 2:
+    sub = random.choice(Rogue_Sub)
+    print(sub)
+elif outcome == "Sorcerer":
+  sub = random.choice(Sorcerer_Sub)
+  print(sub)
+elif outcome == "Warlock":
+  sub = random.choice(Warlock_Sub)
+  print(sub)
+elif outcome == "Wizard":
+  if level > 1:
+    sub = random.choice(Wizard_Sub)
+    print(sub)
+
+stats = ["Roll 1:", "Roll 2:", "Roll 3:", "Roll 4:", "Roll 5:", "Roll 6:"]
+print("Rolls for stats...")
+for items in stats:
+  number = random.randint(3,18)
+  print(items, number)
