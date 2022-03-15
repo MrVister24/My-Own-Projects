@@ -1,3 +1,4 @@
+from replit imoprt clear
 groceries = {}
 
 list_done = False
@@ -9,6 +10,8 @@ while not list_done:
   should_continue = input("Are there more meals? 'yes' or 'no'.\n")
   if should_continue == "no":
     list_done = True
-  
+  elif should_continue == "yes":
+    clear()
+    
 if list_done == True:
   print(groceries)
