@@ -1,0 +1,14 @@
+groceries = {}
+
+list_done = False
+
+while not list_done:
+  meal = input("What are you cooking?\n")
+  items = input("What are the ingredients?\n")
+  groceries[meal] = items
+  should_continue = input("Are there more meals? 'yes' or 'no'.\n")
+  if should_continue == "no":
+    list_done = True
+  
+if list_done == True:
+  print(groceries)
