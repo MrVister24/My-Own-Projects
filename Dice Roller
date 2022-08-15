@@ -1,6 +1,6 @@
 import random
 
-die = int(input("What die would you like to roll? D4, D6, D8, D10, D12, D100, or something else. (enter the nubmer only): "))
+die = int(input("What die would you like to roll? D4, D6, D8, D10, D12, D100, or something else. (enter only the nubmer): "))
 
 random_die = random.randint(1, die)
 
