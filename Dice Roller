@@ -1,0 +1,19 @@
+import random
+
+die = int(input("What die would you like to roll? D4, D6, D8, D10, D12, D100, or something else. (enter the nubmer only): "))
+
+random_die = random.randint(1, die)
+
+amount = int(input("How many of those dice do you need to roll?: "))
+
+total = 0
+
+while amount > 0:
+  random_die = random.randint(1, die)
+  amount -= 1
+  rolls = ["Roll: "]
+  total += random_die
+  for items in rolls:
+    print(items, random_die)
+
+print(f"The total is: {total}")
