@@ -1,0 +1,45 @@
+import random
+
+damage_die = int(input("What damage die are you using for weapon damage? "))
+crit = input("Did you crit? y or n: ")
+spell_slot = int(input("What spell slot are you using? "))
+extra_die = input("Is this a fiend or undead? y or n: ")
+weapon_damage = random.randint(1, damage_die)
+smite_die = random.randint(1, 8)
+extra_damage = random.randint(1, 8)
+total_smite = 0
+crit_total = 0
+
+if crit == "y":
+  while spell_slot > 0:
+    spell_smite = random.randint(1, 8)
+    #print(f"Your smite was: {spell_smite}")
+    total_smite += spell_smite
+    spell_slot -= 1
+    if extra_die == "y":
+      total = weapon_damage + smite_die + total_smite + extra_damage
+      crit_total = total*2
+    else:
+      total = weapon_damage + smite_die + total_smite
+      crit_total = total*2
+  print(f"Your total smite damage is: {crit_total}")
+    
+else:
+  while spell_slot > 0:
+    spell_smite = random.randint(1, 8)
+    #print(f"Your smite was: {spell_smite}")
+    total_smite += spell_smite
+    spell_slot -= 1
+    total = weapon_damage + smite_die + total_smite
+    if extra_die == "y":
+      total = weapon_damage + smite_die + total_smite + extra_damage
+      total
+    else:
+      total = weapon_damage + smite_die + total_smite
+      total * 2
+  print(f"Your total smite damage is: {total}")
+
+#print(f"Your weapon damage is {weapon_damage}")
+#print(f"Your extra smite damage is {total_smite}")
+#print(f"Your smite damage is {smite_die}")
+#print(f"Your fiend/undead damage is {extra_damage}")
